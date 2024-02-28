@@ -1,8 +1,7 @@
 import { StyleSheet } from "react-native";
-import { SCREEN_WIDTH, SCREEN_HEIGHT } from "../../../../application/utils/common.utils";
 
 const styles = StyleSheet.create({
-  profile: {
+  container: {
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingVertical: 15,
@@ -22,25 +21,6 @@ const styles = StyleSheet.create({
     justifyContent:'flex-start',
     alignItems: 'center',
     backgroundColor: 'white'
-  },
-  item1: {
-    flexDirection: 'row',
-    width: '90%',
-    height: 60,
-    justifyContent:'center',
-    alignItems: 'center',
-    gap: 10
-  },
-  item1Name: {
-    width: '35%',
-    fontSize: 18,
-    color: 'gray'
-  },
-  item1Value: {
-    width: '62%',
-    fontSize: 18,
-    color: 'black',
-    flexDirection: 'row'
   },
 })
 

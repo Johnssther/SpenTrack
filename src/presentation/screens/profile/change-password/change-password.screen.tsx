@@ -1,30 +1,27 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { Input, Button } from '@rneui/themed';
+import { MainAuth } from '../../../layout';
+import { ButtonPrimary, ButtonSecundary, Title, SubTitle, InputText } from '../../../components';
 
-export default ({navigation}: any) => {
+const RegisterScreen = ({navigation}: any) => {
+  return (
+    <MainAuth>
+      <Title title='Change Password'/>
+      <SubTitle subtitle='Change password in your account'/>
 
-return (
-  <>
-    <Input
-      placeholder='New Password'
-    />
-    <Input
-      placeholder='Confirmed Password'
-    />
+      <InputText placeholder={'Password'} />
+      <InputText placeholder={'Confirmed Password'} />
 
-    <Button
-        title="Send Code"
-        buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
-        containerStyle={{
-          width:300,
-          marginHorizontal: 50,
-          marginVertical: 10,
-        }}
-        titleStyle={{ color: 'white', marginHorizontal: 20 }}
-        onPress={() => navigation.navigate('ProfileScreen') }
+      <ButtonPrimary
+        title="Change Password"
+        onPress={ () => { navigation.navigate('LoginScreen') } }
+      />
+      <ButtonSecundary
+        title="Cancel"
+        onPress={ () => { navigation.navigate('LoginScreen') } }
       />
 
-  </>
-);
+    </MainAuth>
+  );
 };
+
+export default RegisterScreen;

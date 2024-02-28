@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '100%',
     fontWeight: 'bold',
-    color: 'black'
+    color: 'black',
+    marginTop: 55,
   },
 })
 
