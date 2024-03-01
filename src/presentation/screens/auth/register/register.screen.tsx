@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainAuth } from '../../../layout';
-import { ButtonPrimary, ButtonSecundary, Title, SubTitle, InputText } from '../../../components';
+import { ButtonPrimary, ButtonSecundary, Title, SubTitle, Input } from '../../../components';
 
 const RegisterScreen = ({navigation}: any) => {
   return (
@@ -8,11 +8,11 @@ const RegisterScreen = ({navigation}: any) => {
       <Title title='Create Account'/>
       <SubTitle subtitle='Create a new Account to make your booking list'/>
 
-      <InputText placeholder={'Name'} />
-      <InputText placeholder={'Suername'} />
-      <InputText placeholder={'Email'} />
-      <InputText placeholder={'Password'} />
-      <InputText placeholder={'Confirmed Password'} />
+      <Input placeholder={'Name'} />
+      <Input placeholder={'Suername'} />
+      <Input placeholder={'Email'} />
+      <Input placeholder={'Password'} />
+      <Input placeholder={'Confirmed Password'} />
 
       <ButtonPrimary
         title="Create Account"

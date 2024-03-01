@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { MainAuth } from '../../../layout';
-import { Title, SubTitle, ButtonPrimary, ButtonSecundary, InputText } from '../../../components';
+import { Title, SubTitle, ButtonPrimary, ButtonSecundary, Input } from '../../../components';
 
 const EnterCodeScreen = ({navigation}: any) => {
   return (
@@ -10,7 +10,7 @@ const EnterCodeScreen = ({navigation}: any) => {
 
       <SubTitle subtitle='Enter your forgot key below'/>
 
-      <InputText placeholder={'code'} keyboardType='numeric' />
+      <Input placeholder={'code'} keyboardType='numeric' />
 
       <ButtonPrimary
         title="Verify"

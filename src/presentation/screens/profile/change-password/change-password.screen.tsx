@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainAuth } from '../../../layout';
-import { ButtonPrimary, ButtonSecundary, Title, SubTitle, InputText } from '../../../components';
+import { ButtonPrimary, ButtonSecundary, Title, SubTitle, Input } from '../../../components';
 
 const RegisterScreen = ({navigation}: any) => {
   return (
@@ -8,8 +8,8 @@ const RegisterScreen = ({navigation}: any) => {
       <Title title='Change Password'/>
       <SubTitle subtitle='Change password in your account'/>
 
-      <InputText placeholder={'Password'} />
-      <InputText placeholder={'Confirmed Password'} />
+      <Input placeholder={'Password'} />
+      <Input placeholder={'Confirmed Password'} />
 
       <ButtonPrimary
         title="Change Password"

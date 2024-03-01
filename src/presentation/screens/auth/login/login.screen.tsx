@@ -1,17 +1,17 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { MainAuth } from '../../../layout';
-import { View } from 'react-native';
-import { ButtonPrimary, Title, InputText, ButtonSigInGoogle } from '../../../components';
+import { Text, TouchableOpacity, Button, View } from 'react-native';
+import { MainAuth } from '../../../../presentation/layout';
+import { ButtonPrimary, Title, Input, ButtonSigInGoogle } from '../../../../presentation/components';
 import { COLORS } from '../../../../application/constants/colors.constanst';
+import InputPassword from './components/input-password/input-password.component';
 
 const LoginScreen = ({navigation}: any) => {
   return (
     <MainAuth>
         <Title title='Login'/>
 
-        <InputText placeholder={'Username'} />
-        <InputText placeholder={'Password'} secureTextEntry={true} />
+        <Input placeholder={'Username'} />
+        <InputPassword />
 
         <TouchableOpacity style={{width: '100%'}} onPress={ () => { navigation.navigate('ForgotPasswordScreen') } }>
           <Text style={{ textAlign: 'justify', width: '100%', fontWeight: 'bold', fontSize: 18, paddingLeft:8, marginBottom:10, color: COLORS.slate[500] }}>Forgot Password ?</Text>
@@ -33,10 +33,6 @@ const LoginScreen = ({navigation}: any) => {
         <TouchableOpacity style={{flexDirection:'row'}} onPress={ () => { navigation.navigate('RegisterScreen') } }>
           <Text style={{color:'blue', fontSize:18}}>Create Account</Text>
         </TouchableOpacity>
-        
-
-
-
     </MainAuth>
   );
 };

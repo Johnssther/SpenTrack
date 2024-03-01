@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { MainAuth } from '../../../layout';
-import { Title, SubTitle, ButtonPrimary, ButtonSecundary, InputText } from '../../../components';
+import { Title, SubTitle, ButtonPrimary, ButtonSecundary, Input } from '../../../components';
 
 const ForgotPasswordScreen = ({navigation}: any) => {
   return (
@@ -10,7 +10,7 @@ const ForgotPasswordScreen = ({navigation}: any) => {
 
       <SubTitle subtitle='Enter your email address below'/>
 
-      <InputText placeholder={'Email'} />
+      <Input placeholder={'Email'} />
 
       <ButtonPrimary
         title="Send code"

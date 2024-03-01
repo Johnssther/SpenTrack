@@ -13,7 +13,7 @@ const MainAuth: React.FC<MainAuthProps> = ({ children }) => {
       <View style={styles.container}>
         <Image
         source={require('../../assets/images/logo.png')}
-        style={{width:120, height:120}}
+        style={{ width:65, height:65 }}
       />
         {children}
       </View>
