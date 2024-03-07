@@ -13,6 +13,11 @@ const styles = StyleSheet.create({
     left: 0,
     backgroundColor: 'red'
   },
+  error: {
+    color: 'red',
+    width: '100%',
+    fontWeight: 'bold',
+  }
 })
 
 export default styles;

@@ -6,6 +6,7 @@
     "paths": {
       "presentation/*": ["presentation/*"],
       "components/*": ["presentation/src/components/*"],
+      "src/*": ["src/*"] // Agregar esta línea
     }
   }
 }

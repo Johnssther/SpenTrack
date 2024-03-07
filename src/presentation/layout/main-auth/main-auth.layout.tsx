@@ -3,7 +3,7 @@ import { View, ScrollView, Image } from 'react-native';
 import styles from './main-auth.styles';
 
 interface MainAuthProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const MainAuth: React.FC<MainAuthProps> = ({ children }) => {

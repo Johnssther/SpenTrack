@@ -1,17 +1,3 @@
-export interface User {
-  id: string,
-  name: string,
-  email: string,
-  username: string,
-}
-
-export const UserEmptyState: User = {
-  id: '',
-  name: '',
-  email: '',
-  username: '',
-}
-
 export interface UserAuth {
   id: string | number,
   name: string,

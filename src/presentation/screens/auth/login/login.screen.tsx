@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, TouchableOpacity, Button, View } from 'react-native';
 import { MainAuth } from '../../../../presentation/layout';
 import { ButtonPrimary, Title, Input, ButtonSigInGoogle } from '../../../../presentation/components';
 import { COLORS } from '../../../../application/constants/colors.constanst';
 import InputPassword from './components/input-password/input-password.component';
+import useLoginForm from '../../../hooks/use-login-form';
+import styles from './login.styles';
 
 const LoginScreen = ({navigation}: any) => {
+  const { email, setEmail, password, setPassword, handleSubmit, errors } = useLoginForm();
+
   return (
     <MainAuth>
         <Title title='Login'/>
 
-        <Input placeholder={'Username'} />
-        <InputPassword />
+        <Input placeholder={'Email'} errorMessage={errors.email && errors.email} value={email} onChangeText={(email) => setEmail(email)} />
+        
+        <Input placeholder={'Password'} errorMessage={errors.password && errors.password} value={password} onChangeText={(password) => setPassword(password)} />
+
+        {/* <InputPassword /> */}
 
         <TouchableOpacity style={{width: '100%'}} onPress={ () => { navigation.navigate('ForgotPasswordScreen') } }>
           <Text style={{ textAlign: 'justify', width: '100%', fontWeight: 'bold', fontSize: 18, paddingLeft:8, marginBottom:10, color: COLORS.slate[500] }}>Forgot Password ?</Text>
@@ -19,7 +26,7 @@ const LoginScreen = ({navigation}: any) => {
 
         <ButtonPrimary
           title="Sign in"
-          onPress={ () => { navigation.navigate('ProfileScreen') } }
+          onPress={ () => handleSubmit() }
         />
 
         <Text style={{ textAlign: 'center', width: '100%', fontWeight: 'bold', fontSize: 18, paddingLeft:8, marginBottom:10, color: COLORS.slate[500] }}>Or</Text>
