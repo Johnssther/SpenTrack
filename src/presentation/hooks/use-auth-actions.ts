@@ -7,7 +7,7 @@ import { UserAuthAdapter } from '../../infrastructure/adapters/user-auth.adapter
 export const useUserAuthActions = () => {
 
   const dispatch = useAppDispatch();
-  const [ onLogin ] = useOnLoginMutation()
+  const [ onLogin, { isLoading, error } ] = useOnLoginMutation();
 
   const loginHandle = async (email: string, password: string) => {
     try {
@@ -19,7 +19,8 @@ export const useUserAuthActions = () => {
 
       // Dispatch the login action with the adapted user data
       await dispatch( login(userAuthAdapter) );
-      
+
+     
     } catch (error) {
       // Handle any errors that occur during the login process
       console.error("Error login:", error);
@@ -34,5 +35,5 @@ export const useUserAuthActions = () => {
     await dispatch( login(userAuth) );
   }
 
-  return { loginHandle, logoutHandle, refreshTokenHandle }; 
+  return { loginHandle, logoutHandle, refreshTokenHandle, isLoading }; 
 }

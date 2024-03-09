@@ -16,8 +16,6 @@ const useLoginForm = () => {
   const [password, setPassword] = useState<string>('');
   const [errors, setErrors] = useState<Errors>({});
 
-  const { loginHandle } = useUserAuthActions();
-
   const validateForm = (): Errors => {
     let errors: Errors = {};
 
@@ -40,18 +38,16 @@ const useLoginForm = () => {
     setErrors({})
   }
 
-  const handleSubmit = (): void => {
+  const isValidForm = (): boolean => {
     const errors = validateForm();
 
     if (Object.keys(errors).length === 0) {
       // Logic send form
-
-      loginHandle(email, password)
-
-
       clearForm();
+      return true;
     } else {
       setErrors(errors);
+      return false;
     }
   };
 
@@ -60,7 +56,7 @@ const useLoginForm = () => {
     setEmail,
     password,
     setPassword,
-    handleSubmit,
+    isValidForm,
     errors,
   };
 };
